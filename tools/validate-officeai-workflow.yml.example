@@ -1,0 +1,40 @@
+name: Validate OfficeAI
+on:
+  push:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  syntax:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Validate inline JavaScript
+        run: |
+          node --input-type=module <<'JS'
+          import fs from 'node:fs';
+          import os from 'node:os';
+          import path from 'node:path';
+          import {spawnSync} from 'node:child_process';
+          const pages = ['index.html','incorporacion.html','recepcion-bandeja.html','recepcion-cliente.html','officeai-whatsapp-v3.html','contactos.html','presupuestos.html','assistant-connected.html','contratos.html','finanzas.html','facturacion.html','requests.html','tarifas.html','ventas.html'];
+          const dir=fs.mkdtempSync(path.join(os.tmpdir(),'officeai-'));
+          let failed=0;
+          try {
+            for(const page of pages){
+              const html=fs.readFileSync(page,'utf8');
+              const scripts=[...html.matchAll(/<script\b[^>]*>([\s\S]*?)<\/script>/gi)];
+              if(!scripts.length){console.error(page+': no script');failed++;continue;}
+              for(const [i,m] of scripts.entries()){
+                const file=path.join(dir,page+'-'+i+'.mjs');
+                fs.writeFileSync(file,m[1]);
+                const result=spawnSync(process.execPath,['--check',file],{encoding:'utf8'});
+                if(result.status!==0){console.error(page,result.stderr||result.error);failed++;}
+                else console.log(page+': syntax OK');
+              }
+            }
+          } finally {fs.rmSync(dir,{recursive:true,force:true});}
+          if(failed)process.exitCode=1;
+          JS
