@@ -37,3 +37,12 @@ No considerar el lanzamiento aprobado por el mero hecho de tener código impleme
 - Implementada en commit 4e3ba90738f29b95dcb0860181dcb7803a060d3d.
 - El propietario confirma haber configurado la URL de redirección, recibido el correo, cambiado la contraseña y vuelto a iniciar sesión correctamente.
 - Validación comunicada por el propietario, no ejecutada independientemente por el asistente.
+
+## Piloto de reservas y aceptación — 26/11/2026
+- Outra: horario cafetería 08:00 hasta cierre; cocina 13:00–15:45 y 20:00–23:45; reservas admitidas con confirmación humana.
+- Campos estructurados y RPC de reservas instalados; API recepción v5 activa, piloto público desactivado.
+- Formulario (3cd2d453c3a3da41ee82edec75f3108d63dc6696), bandeja (09eabc42041fcc172b63a88a114b38af6180b524), filtros (a37e96eb9f13a8b8f7bfc13012079b71dcb9dbe7), agenda (7658b4f97e5025b4738e12900ce81623a6502217).
+- Verificado: RPC rechaza datos inválidos y servicio desactivado; ejecución anónima denegada. Cero reservas registradas en el piloto en la comprobación. No se ha probado el flujo positivo HTTP/navegador.
+- Pendientes: dirección real, aviso de privacidad revisado, prueba autorizada de extremo a extremo, autorización de apertura. Agenda limitada a 100 filas; aceptación interna sin notificación automática ni control de aforo.
+- El propietario comunicó funcionamiento del asistente autenticado; falta verificación independiente.
+- Condiciones comerciales acordadas en CONDICIONES-COMERCIALES.md; revisión jurídica y fiscal pendiente. No publicar datos fiscales sin revisión.
