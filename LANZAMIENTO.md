@@ -32,3 +32,8 @@ Validar los flujos esenciales con autorización del propietario, sin gastos ni c
 5. Prueba de WhatsApp saliente únicamente con autorización y destinatario de prueba controlado.
 
 No considerar el lanzamiento aprobado por el mero hecho de tener código implementado. No emitir facturas fiscales desde los borradores.
+
+## Recuperación de contraseña — 26/11/2026
+- Implementada en commit 4e3ba90738f29b95dcb0860181dcb7803a060d3d.
+- El propietario confirma haber configurado la URL de redirección, recibido el correo, cambiado la contraseña y vuelto a iniciar sesión correctamente.
+- Validación comunicada por el propietario, no ejecutada independientemente por el asistente.
