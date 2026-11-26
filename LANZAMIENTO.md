@@ -49,3 +49,6 @@ No considerar el lanzamiento aprobado por el mero hecho de tener código impleme
 
 ## Aceptación de navegación por el propietario — 26/11/2026
 El propietario confirma que cargan Presupuestos, Contratos, Finanzas, Facturación, Recepción y Usuarios. No repetir comprobaciones de carga. Esta aceptación no valida escrituras, operaciones integrales, aislamiento con datos ni todos los dispositivos. Pendientes: circuito comercial autorizado, WhatsApp saliente, revisión legal y autorización de apertura.
+
+## WhatsApp bidireccional — 26/11/2026
+Recepción verificada en Supabase a las 03:33:29 CET. Intento inicial incierto (502), repetición bloqueada (409). Tras renovación del token por el propietario, envío aceptado por Meta a las 03:40:11 CET y entrega confirmada por el propietario en su móvil. No repetir prueba básica. Pendiente credencial de larga duración y configuración de producción; no confundir aceptación del piloto con lanzamiento comercial.
