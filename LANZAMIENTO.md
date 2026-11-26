@@ -46,3 +46,6 @@ No considerar el lanzamiento aprobado por el mero hecho de tener código impleme
 - Pendientes: dirección real, aviso de privacidad revisado, prueba autorizada de extremo a extremo, autorización de apertura. Agenda limitada a 100 filas; aceptación interna sin notificación automática ni control de aforo.
 - El propietario comunicó funcionamiento del asistente autenticado; falta verificación independiente.
 - Condiciones comerciales acordadas en CONDICIONES-COMERCIALES.md; revisión jurídica y fiscal pendiente. No publicar datos fiscales sin revisión.
+
+## Aceptación de navegación por el propietario — 26/11/2026
+El propietario confirma que cargan Presupuestos, Contratos, Finanzas, Facturación, Recepción y Usuarios. No repetir comprobaciones de carga. Esta aceptación no valida escrituras, operaciones integrales, aislamiento con datos ni todos los dispositivos. Pendientes: circuito comercial autorizado, WhatsApp saliente, revisión legal y autorización de apertura.
