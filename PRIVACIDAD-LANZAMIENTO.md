@@ -26,3 +26,12 @@ Completar identidad del responsable, finalidad, base jurídica, destinatarios, t
 - Revisar cookies y almacenamiento local realmente utilizados.
 
 Referencia normativa: RGPD, artículos 5, 6, 13, 28 y 32; LOPDGDD; LSSI cuando corresponda. Requiere revisión profesional.
+
+## Inventario técnico y propuesta de conservación
+- GitHub Pages: alojamiento web y distribución de código; revisar términos, registros técnicos y transferencias.
+- Supabase: base de datos, autenticación y Edge Functions; verificar región efectiva, DPA, subencargados y copias de seguridad.
+- Meta WhatsApp Business: mensajería cuando se contrate y habilite; verificar condiciones, roles y transferencias.
+- Asistente gratuito: reglas internas, sin proveedor externo de IA en ese flujo. No activar IA externa sin revisión.
+- Propuesta pendiente de aprobación: consultas sin contrato 12 meses; conversaciones 90 días; citas 90 días tras resolución; cuentas durante servicio; facturación y contratos según obligaciones legales; datos por cuenta de clientes según instrucciones.
+- No ejecutar borrados automáticos hasta aprobación, definir excepciones, copias de seguridad y procedimiento de derechos.
+- Pendiente: verificar acuerdos efectivos, región, transferencias, consentimiento de titular para publicación y revisión jurídica. Captación permanece cerrada.
