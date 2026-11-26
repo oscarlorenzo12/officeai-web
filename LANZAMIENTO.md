@@ -52,3 +52,11 @@ El propietario confirma que cargan Presupuestos, Contratos, Finanzas, Facturaci�
 
 ## WhatsApp bidireccional — 26/11/2026
 Recepción verificada en Supabase a las 03:33:29 CET. Intento inicial incierto (502), repetición bloqueada (409). Tras renovación del token por el propietario, envío aceptado por Meta a las 03:40:11 CET y entrega confirmada por el propietario en su móvil. No repetir prueba básica. Pendiente credencial de larga duración y configuración de producción; no confundir aceptación del piloto con lanzamiento comercial.
+
+## Prioridades de salida — actualización 26/11/2026
+- Contratación: aceptación expresa registrada manualmente para presupuestos y contratos manuales; triggers de activación instalados. PDF comercial imprimible. Bajas con preaviso de 30 días, vinculación de servicio, revisión y desactivación manual de recepción. Implementación no equivale a validación funcional; automatización de bajas aplazada.
+- WhatsApp: piloto bidireccional confirmado anteriormente; credencial permanente presenta error Meta código 10. No repetir pruebas sin nueva evidencia. Producción y revisión Meta pendientes.
+- P0: validar circuito comercial autorizado, aislamiento con datos, recepción HTTP y navegación funcional móvil/escritorio; no repetir comprobaciones de carga ya aceptadas.
+- P0: identificación legal del prestador, privacidad y autorización expresa de apertura. Captación pública permanece cerrada.
+- P1: comprobar impresión de propuestas y borradores, seguimiento comercial interno y agenda de pendientes. Sin envíos automáticos.
+- P2: automatización de bajas, integraciones de pago y mejoras no esenciales. No contratar servicios.
