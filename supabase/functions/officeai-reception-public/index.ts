@@ -25,6 +25,10 @@ return reply({availability:data,appointment_confirmed:false});
 }
 if(b.action==="reservation"){
 if(b.consent!==true||typeof b.name!=="string"||typeof b.phone!=="string"||typeof b.date!=="string"||!/^\d{4}-\d{2}-\d{2}$/.test(b.date)||typeof b.time!=="string"||!/^\d{2}:\d{2}$/.test(b.time)||!Number.isSafeInteger(b.guests)||b.guests<1||b.guests>2147483647||(b.note!=null&&typeof b.note!=="string"))return reply({error:"Reserva no válida"},400);
+const check=await sb.rpc("officeai_public_reservation_check",{p_instance:id,p_date:b.date,p_time:b.time,p_guests:b.guests});
+if(check.error)return reply({error:"No se pudo verificar la disponibilidad. Inténtalo de nuevo."},503);
+const blocked:Record<string,string>={full:"No hay plazas suficientes. Selecciona otra hora.",closed:"El establecimiento estará cerrado.",outside_hours:"Selecciona una hora dentro del horario.",invalid:"Revisa los datos de la reserva.",unavailable:"Recepcionista no disponible."};
+if(check.data!=="available"&&check.data!=="manual")return reply({error:blocked[check.data]||"Disponibilidad no verificable"},409);
 const {data,error}=await sb.rpc("officeai_public_reservation",{p_instance:id,p_name:b.name,p_phone:b.phone,p_date:b.date,p_time:b.time,p_guests:b.guests,p_note:b.note??""});
 if(error)return reply({error:"No se pudo registrar la reserva"},error.message.includes("Límite temporal")?429:400);
 return reply({ok:true,request_id:data,status:"pending",appointment_confirmed:false});
