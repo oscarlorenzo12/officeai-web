@@ -1,0 +1,1 @@
+ALTER TABLE public.officeai_whatsapp_send_attempts ADD COLUMN meta_http_status integer CHECK (meta_http_status BETWEEN 100 AND 599), ADD COLUMN meta_error_code integer, ADD COLUMN meta_error_subcode integer;
