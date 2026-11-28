@@ -42,7 +42,7 @@ Deno.serve(async req=>{
    if(!event?.id||!["sent","delivered","read","failed"].includes(event.status)||!/^\d{1,10}$/.test(String(event.timestamp||"")))continue;
    const at=new Date(Number(event.timestamp)*1000);
    if(!Number.isFinite(at.getTime()))continue;
-   const {error:de}=await db.rpc("officeai_whatsapp_apply_delivery_status",{p_phone_id:phone,p_message_id:String(event.id),p_status:event.status,p_at:at.toISOString()});
+   const {error:de}=await db.rpc("officeai_whatsapp_record_delivery_event",{p_phone_id:phone,p_message_id:String(event.id),p_status:event.status,p_at:at.toISOString()});
    if(de)return plain("Storage error",500);
   }
   for(const m of change.value?.messages||[]){
